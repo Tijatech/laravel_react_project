@@ -137,9 +137,7 @@ render() {
                       <label className="custom-control-label font-14" htmlFor="same-address">Keep me logged in</label>
                     </div>
                     <input className="btn btn-primary btn-block" disabled={this.state.formSubmitting} type="submit" defaultValue="Login" style={{backgroundColor: '#18a809', borderColor: '#18a809'}} />
-                    <p id="login-status-message" />
-                    <p className="font-14 text-center mt-15"><Link to="/team_login">Team Member</Link> or <Link to="/tpv_login">TPV Agent</Link>?  Login <Link to="/">here</Link>.</p>
-                    {/*        <p class="font-14 text-center mt-15"><a href="ResetPasswordEmailPage.php?admin=1">Forget Password</a>*/}
+                    
                   </form>
                 </div>
               </div>

@@ -141,39 +141,47 @@ render() {
     arr.push(value)
   ));
   return (
-    <div className="container">
-      <div className="row">
-        <div className="offset-xl-3 col-xl-6 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12 ">
-          <h2>Create Your Account</h2>
-        
-        {this.state.isRegistered ? <FlashMessage duration={60000} persistOnHover={true}>
-          <h5 className={"alert alert-success"}>Registration successful, redirecting...</h5></FlashMessage> : ''}
-        {this.state.error ? <FlashMessage duration={900000} persistOnHover={true}>
-          <h5 className={"alert alert-danger"}>Error: {this.state.error}</h5>
-          <ul>
-            {arr.map((item, i) => (
-              <li key={i}><h5 style={{color: 'red'}}>{item}</h5></li>
-             ))}
-          </ul></FlashMessage> : ''}
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <input id="username" type="text" name="username" placeholder="Name" className="form-control" required onChange={this.handleName}/>
+    <div className="hk-wrapper">
+      <div className="hk-pg-wrapper hk-auth-wrapper">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-12 pa-0">
+              <div className="auth-form-wrap pt-xl-0 pt-70">
+                <div className="auth-form w-xl-30 w-lg-55 w-sm-75 w-100">
+                  <img style={{width: '290px', margin: 'auto', display: 'block'}} src={location.origin + '/assets/img/everlast_profile_img_transparent.png' } /><a className="auth-brand text-center d-block mb-20" href="#">
+                  </a>
+                  <h3 style={{color: '#18a809', textAlign: 'center', marginBottom: '40px'}}>Create An Account</h3>
+                  {this.state.isRegistered ? <FlashMessage duration={60000} persistOnHover={true}>
+                    <h5 className={"alert alert-success"}>Registration successful, redirecting...</h5></FlashMessage> : ''}
+                  {this.state.error ? <FlashMessage duration={900000} persistOnHover={true}>
+                    <h5 className={"alert alert-danger"}>Error: {this.state.error}</h5>
+                    <ul>
+                      {arr.map((item, i) => (
+                        <li key={i}><h5 style={{color: 'red'}}>{item}</h5></li>
+                      ))}
+                    </ul></FlashMessage> : ''}
+                    <form onSubmit={this.handleSubmit}>
+                      <div className="form-group">
+                        <input id="username" type="text" name="username" placeholder="Name" className="form-control" required onChange={this.handleName}/>
+                      </div>
+                      <div className="form-group">
+                        <input id="email" type="email" name="email" placeholder="E-mail" className="form-control" required onChange={this.handleEmail}/>
+                      </div>
+                      <div className="form-group">
+                        <input id="password" type="password" name="password" placeholder="Password" className="form-control" required onChange={this.handlePassword}/>
+                      </div>
+                      <div className="form-group">
+                        <input id="password_confirm" type="password" name="password_confirm" placeholder="Confirm Password" className="form-control" required onChange={this.handlePasswordConfirm} />
+                      </div>
+                      <input className="btn btn-primary btn-block" disabled={this.state.formSubmitting} type="submit" defaultValue="Register" style={{backgroundColor: '#18a809', borderColor: '#18a809'}} />
+                    </form>
+                    <p className="mt-2">Already have an account? <Link to="/authenticate/login" className="text-yellow"> Log In</Link> |
+                      <span><Link to="/"> Back to Home</Link></span>
+                    </p>
+                </div>
+              </div>
             </div>
-            <div className="form-group">
-              <input id="email" type="email" name="email" placeholder="E-mail" className="form-control" required onChange={this.handleEmail}/>
-            </div>
-            <div className="form-group">
-              <input id="password" type="password" name="password" placeholder="Password" className="form-control" required onChange={this.handlePassword}/>
-            </div>
-            <div className="form-group">
-              <input id="password_confirm" type="password" name="password_confirm" placeholder="Confirm Password" className="form-control" required onChange={this.handlePasswordConfirm} />
-            </div>
-            <button type="submit" name="singlebutton" className="btn btn-default btn-lg  btn-block mb10" disabled={this.state.formSubmitting ? "disabled" : ""}>Create Account</button>
-          </form>
-          <p className="text-white">Already have an account?
-            <Link to="/login" className="text-yellow"> Log In</Link> |
-            <span className="pull-right"><Link to="/" className="text-white">Back to Home</Link></span>
-        </p>
+          </div>
         </div>
       </div>
     </div>

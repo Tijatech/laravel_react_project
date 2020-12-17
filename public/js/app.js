@@ -70639,17 +70639,7 @@ var Login = /*#__PURE__*/function (_Component) {
           backgroundColor: '#18a809',
           borderColor: '#18a809'
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "login-status-message"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "font-14 text-center mt-15"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/team_login"
-      }, "Team Member"), " or ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/tpv_login"
-      }, "TPV Agent"), "?  Login ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/"
-      }, "here"), ".")))))))));
+      })))))))));
     }
   }]);
 
@@ -70928,12 +70918,36 @@ var Register = /*#__PURE__*/function (_Component) {
         return arr.push(value);
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+        className: "hk-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hk-pg-wrapper hk-auth-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-fluid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "offset-xl-3 col-xl-6 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12 "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create Your Account"), this.state.isRegistered ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flash_message__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        className: "col-xl-12 pa-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "auth-form-wrap pt-xl-0 pt-70"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "auth-form w-xl-30 w-lg-55 w-sm-75 w-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          width: '290px',
+          margin: 'auto',
+          display: 'block'
+        },
+        src: location.origin + '/assets/img/everlast_profile_img_transparent.png'
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "auth-brand text-center d-block mb-20",
+        href: "#"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          color: '#18a809',
+          textAlign: 'center',
+          marginBottom: '40px'
+        }
+      }, "Create An Account"), this.state.isRegistered ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flash_message__WEBPACK_IMPORTED_MODULE_3___default.a, {
         duration: 60000,
         persistOnHover: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -70993,22 +71007,23 @@ var Register = /*#__PURE__*/function (_Component) {
         className: "form-control",
         required: true,
         onChange: this.handlePasswordConfirm
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "btn btn-primary btn-block",
+        disabled: this.state.formSubmitting,
         type: "submit",
-        name: "singlebutton",
-        className: "btn btn-default btn-lg  btn-block mb10",
-        disabled: this.state.formSubmitting ? "disabled" : ""
-      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-white"
-      }, "Already have an account?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/login",
+        defaultValue: "Register",
+        style: {
+          backgroundColor: '#18a809',
+          borderColor: '#18a809'
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "mt-2"
+      }, "Already have an account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/authenticate/login",
         className: "text-yellow"
-      }, " Log In"), " |", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "pull-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/",
-        className: "text-white"
-      }, "Back to Home"))))));
+      }, " Log In"), " |", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, " Back to Home"))))))))));
     }
   }]);
 
