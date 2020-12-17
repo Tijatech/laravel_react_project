@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import NavMenu from './components/NavMenu';
-import AdminLeadsContainer from "./AdminLeadsContainer";
-class AdminLeads extends Component {
+import Header from './components/mini/Header';
+import Footer from './components/mini/Footer';
+import NavMenu from './components/mini/NavMenu';
+import LeadsContainer from "./components/LeadsContainer";
+class Leads extends Component {
     constructor() {
         super();
         this.state = {
@@ -26,10 +26,10 @@ class AdminLeads extends Component {
             <div className="hk-wrapper hk-horizontal-nav">
                 <Header userData={this.state.user} userIsLoggedIn={this.state.isLoggedIn} />
                 <NavMenu />
-                    <AdminLeadsContainer />
+                    <LeadsContainer />
                 <Footer />
             </div>
         )
     }
 }
-export default AdminLeads
+export default Leads

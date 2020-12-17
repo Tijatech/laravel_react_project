@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link, Redirect, withRouter} from 'react-router-dom';
 import FlashMessage from 'react-flash-message';
-class LoginContainer extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class LoginContainer extends Component {
         username: '',
         password: '',
       },
-      redirect: props.redirect,
+      redirect: props.location,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleName = this.handleName.bind(this);
@@ -26,7 +26,7 @@ class LoginContainer extends Component {
     }
   }
   componentDidMount() {
-    const { prevLocation } = this.state.redirect.state || { prevLocation: { pathname: '/admin_dashboard' } };
+    const { prevLocation } = this.state.redirect.state || { prevLocation: { pathname: '/dashboard' } };
     if (prevLocation && this.state.isLoggedIn) {
       return this.props.history.push(prevLocation);
     }
@@ -114,11 +114,11 @@ render() {
             <div className="col-xl-12 pa-0">
               <div className="auth-form-wrap pt-xl-0 pt-70">
                 <div className="auth-form w-xl-30 w-lg-55 w-sm-75 w-100">
-                  <img style={{width: '290px', margin: 'auto', display: 'block'}} src="assets/img/everlast_profile_img_transparent.png" /><a className="auth-brand text-center d-block mb-20" href="#">
+                  <img style={{width: '290px', margin: 'auto', display: 'block'}} src={location.origin + '/assets/img/everlast_profile_img_transparent.png' } /><a className="auth-brand text-center d-block mb-20" href="#">
                   </a>
-                  <h3 style={{color: '#18a809', textAlign: 'center', marginBottom: '40px'}}>Admin Portal Login</h3>
-                  {this.state.isLoggedIn ? <FlashMessage duration={60000} persistOnHover={true}>
-                  <h5 className={"alert alert-success"}>Login successful, redirecting...</h5></FlashMessage> : ''}
+                  <h3 style={{color: '#18a809', textAlign: 'center', marginBottom: '40px'}}>Everlast Portal Login</h3>
+                  {this.state.isLoggedIn ? <FlashMessage duration={6000} persistOnHover={true}>
+                  <h6 className={"alert alert-success"}>Login successful, redirecting...</h6></FlashMessage> : ''}
                   {this.state.error ? <FlashMessage duration={100000} persistOnHover={true}>
                   <h5 className={"alert alert-danger"}>Error: {this.state.error}</h5></FlashMessage> : ''}
                   {/* {error && !this.state.isLoggedIn ? <FlashMessage duration={100000} persistOnHover={true}>
@@ -151,4 +151,4 @@ render() {
     )
   }
 }
-export default withRouter(LoginContainer);
+export default withRouter(Login);

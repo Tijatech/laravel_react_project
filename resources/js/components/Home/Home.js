@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link, withRouter} from 'react-router-dom';
 class Home extends Component {
   constructor() {
     super();
@@ -19,9 +20,8 @@ render() {
                         </a>
                         <h3 style={{color: '#18a809', textAlign: 'center', marginBottom: '40px'}}>Choose your position!</h3>
                         <div className="row">
-                          <a href="/admin_login" to="/admin_login" style={{backgroundColor: '#18a809', borderColor: '#18a809', marginTop: '8px'}} className="mx-auto m-40-sm  col-lg-3 btn btn-primary btn-block">Admin</a> 
-                          <a href="/team_login" to="/team_login" style={{backgroundColor: '#18a809', borderColor: '#18a809'}} className="mx-auto m-40-sm  col-lg-4 btn btn-primary btn-block">Team Member</a>
-                          <a href="/tpv_login" to="/tpv_login" style={{backgroundColor: '#18a809', borderColor: '#18a809'}} className="mx-auto m-40-sm  col-lg-3 btn btn-primary btn-block">TPV Agent</a>
+                          <Link to="/authenticate/login" style={{backgroundColor: '#18a809', borderColor: '#18a809', marginTop: '8px'}} className="mx-auto m-40-sm  col-lg-3 btn btn-primary btn-block">Login</Link> 
+                          <Link to="/authenticate/register" style={{backgroundColor: '#18a809', borderColor: '#18a809'}} className="mx-auto m-40-sm  col-lg-4 btn btn-primary btn-block">Register</Link>
                         </div>
                       </div>
                     </div>
@@ -33,4 +33,4 @@ render() {
       )
     }
   }
-export default Home
+export default withRouter(Home)

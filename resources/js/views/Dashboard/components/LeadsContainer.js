@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-class AdminLeadsContainer extends Component {
+class LeadsContainer extends Component {
     constructor() {
         super();
         this.state = {
@@ -52,4 +52,4 @@ class AdminLeadsContainer extends Component {
         )
     }
 }
-export default AdminLeadsContainer
+export default LeadsContainer

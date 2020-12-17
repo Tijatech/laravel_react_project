@@ -61,9 +61,9 @@
         <link href="{{ asset('vendors/tablesaw/dist/tablesaw.css')}}" rel="stylesheet" type="text/css" />
     	
     	<!-- Data Table CSS -->
-        <link href="{{ asset('vendors/datatables.net-dt/css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
+        <!-- <link href="{{ asset('vendors/datatables.net-dt/css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('vendors/datatables.net-editor-dt/css/editor.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('vendors/datatables.net-editor-dt/css/editor.bootstrap.min.css')}}" rel="stylesheet" type="text/css" /> -->
         <!-- Custom CSS -->
         <link href="{{ asset('assets/css/style.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{ asset('assets/css/custom_admin.css')}}" rel="stylesheet" type="text/css">
@@ -128,9 +128,9 @@
     </head>
     <body>
         <!-- Preloader -->
-        <div class="preloader-it">
+        <!-- <div class="preloader-it">
             <div class="loader-pendulums"></div>
-        </div>
+        </div> -->
     <!-- /Preloader -->
         <div id="index"></div>
         <script src="{{ asset('js/app.js') }}"></script>

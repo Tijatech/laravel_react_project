@@ -80,6 +80,7 @@ class AuthController extends Controller
             'id' => $user->id,
             'username' => $user->username,
             'email' => $user->email,
+            'role' => $user->role,
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse(

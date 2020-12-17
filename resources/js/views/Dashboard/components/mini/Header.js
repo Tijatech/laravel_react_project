@@ -49,7 +49,7 @@ class Header extends Component {
                 <div className="media">
                     <div className="media-img-wrap">
                     <div className="avatar">
-                        <img src="assets/img/everlast-circle.png" alt="user" className="avatar-img rounded-circle" />
+                        <img src={assets/img/everlast-circle.png} alt="user" className="avatar-img rounded-circle" />
                     </div>
                     <span className="badge badge-success badge-indicator" />
                     </div>

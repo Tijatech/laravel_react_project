@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import FlashMessage from 'react-flash-message';
-class RegisterContainer extends Component {
+class Register extends Component {
   // 2.1
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ class RegisterContainer extends Component {
         password: '',
         password_confirmation: '',
     },
-    redirect: props.redirect,
+    redirect: props.location,
 };
 this.handleSubmit = this.handleSubmit.bind(this);
 this.handleName = this.handleName.bind(this);
@@ -181,4 +181,4 @@ render() {
   }
 }
 // 2.8
-export default withRouter(RegisterContainer);
+export default withRouter(Register);
